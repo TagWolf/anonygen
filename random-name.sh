@@ -8,9 +8,9 @@
 # usage: ./random-name.sh
 
 # lists
-malelist="male-names.txt"
-femalelist="female-names.txt"
-lastlist="last-names.txt"
+malelist="./lists/male-names.txt"
+femalelist="./lists/female-names.txt"
+lastlist="./lists/last-names.txt"
 
 function r_pick() {
   head -$((${RANDOM} % `wc -l < $1` + 1)) $1 | tail -1
