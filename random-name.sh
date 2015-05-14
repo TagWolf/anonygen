@@ -8,9 +8,9 @@ femalelist="female-names.txt"
 lastlist="last-names.txt"
 
 # 10 males names
-echo ---------------
-echo 10 male names
-echo ---------------
+echo "
+10 male names
+---------------"
 for m in {1..10}
 do
   r_male=$(head -$((${RANDOM} % `wc -l < $malelist` + 1)) $malelist | tail -1)
@@ -19,9 +19,9 @@ do
 done
 
 # 10 female names
-echo ---------------
-echo 10 female names
-echo ---------------
+echo "
+10 female names
+---------------"
 for f in {1..10}
 do
   r_female=$(head -$((${RANDOM} % `wc -l < $femalelist` + 1)) $femalelist | tail -1)
@@ -29,3 +29,5 @@ do
   echo $r_female $r_flast
 done
 
+echo
+exit 0
