@@ -20,8 +20,8 @@ function r_pick() {
 
 # 10 males names
 echo "
-10 male names
----------------"
+Random Male Names
+--------------------"
 for m in {1..10}
 do
   r_male=$(r_pick $malelist)
@@ -31,8 +31,8 @@ done
 
 # 10 female names
 echo "
-10 female names
----------------"
+Random Female Names
+--------------------"
 for f in {1..10}
 do
   r_female=$(r_pick $femalelist)
