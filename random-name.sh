@@ -7,11 +7,25 @@ malelist="male-names.txt"
 femalelist="female-names.txt"
 lastlist="last-names.txt"
 
+# 10 males names
+echo ---------------
+echo 10 male names
+echo ---------------
+for m in {1..10}
+do
+  r_male=$(head -$((${RANDOM} % `wc -l < $malelist` + 1)) $malelist | tail -1)
+  r_mlast=$(head -$((${RANDOM} % `wc -l < $lastlist` + 1)) $lastlist | tail -1)
+  echo $r_male $r_mlast
+done
 
-r_male=$(head -$((${RANDOM} % `wc -l < $malelist` + 1)) $malelist | tail -1)
-r_female=$(head -$((${RANDOM} % `wc -l < $femalelist` + 1)) $femalelist | tail -1)
-r_mlast=$(head -$((${RANDOM} % `wc -l < $lastlist` + 1)) $lastlist | tail -1)
-r_flast=$(head -$((${RANDOM} % `wc -l < $lastlist` + 1)) $lastlist | tail -1)
+# 10 female names
+echo ---------------
+echo 10 female names
+echo ---------------
+for f in {1..10}
+do
+  r_female=$(head -$((${RANDOM} % `wc -l < $femalelist` + 1)) $femalelist | tail -1)
+  r_flast=$(head -$((${RANDOM} % `wc -l < $lastlist` + 1)) $lastlist | tail -1)
+  echo $r_female $r_flast
+done
 
-echo Male:   $r_male $r_mlast
-echo Female: $r_female $r_flast
