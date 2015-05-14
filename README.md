@@ -4,7 +4,7 @@ Simple bash script (k.i.s.s.) that generates a random name, address, and more fr
 
 Example Output:
 
-
+```
 $ ./random-name.sh
 
 Random Male Names
@@ -32,3 +32,4 @@ LILLIAN FORBES
 MARISA CARDENAS
 VIVIAN COX
 ILA DALTON
+```

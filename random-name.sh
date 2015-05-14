@@ -13,12 +13,10 @@ femalelist="female-names.txt"
 lastlist="last-names.txt"
 
 function r_pick() {
-
   head -$((${RANDOM} % `wc -l < $1` + 1)) $1 | tail -1
-
 }
 
-# 10 males names
+# gen 10 male names
 echo "
 Random Male Names
 --------------------"
@@ -29,7 +27,7 @@ do
   echo $r_male $r_mlast
 done
 
-# 10 female names
+# gen 10 female names
 echo "
 Random Female Names
 --------------------"
