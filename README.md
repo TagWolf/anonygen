@@ -1,7 +1,9 @@
 # anonygen
 Simple bash script (k.i.s.s.) that generates a random name, address, and more from the top most common first and last names.
 
-Names are generated from the top 1000 MOST COMMON male and female first and last names. Making this perfect for picking a broad scope name to play pretend with.
+Names are generated from U.S. cencus data of the MOST COMMON male, female, and last names. Making this perfect for picking a broad scope name to play pretend with.
+
+300 Million Combinations!
 
 
 Example Output:
