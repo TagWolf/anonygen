@@ -1,11 +1,22 @@
 #!/bin/bash
 
+# random-name.sh
+# by tag
+# jumpnetter[spam] at [spam]gmail
+#
 # generates random names
+# usage: ./random-name.sh
 
 # lists
 malelist="male-names.txt"
 femalelist="female-names.txt"
 lastlist="last-names.txt"
+
+function r_pick() {
+
+  head -$((${RANDOM} % `wc -l < $1` + 1)) $1 | tail -1
+
+}
 
 # 10 males names
 echo "
@@ -13,8 +24,8 @@ echo "
 ---------------"
 for m in {1..10}
 do
-  r_male=$(head -$((${RANDOM} % `wc -l < $malelist` + 1)) $malelist | tail -1)
-  r_mlast=$(head -$((${RANDOM} % `wc -l < $lastlist` + 1)) $lastlist | tail -1)
+  r_male=$(r_pick $malelist)
+  r_mlast=$(r_pick $lastlist)
   echo $r_male $r_mlast
 done
 
@@ -24,8 +35,8 @@ echo "
 ---------------"
 for f in {1..10}
 do
-  r_female=$(head -$((${RANDOM} % `wc -l < $femalelist` + 1)) $femalelist | tail -1)
-  r_flast=$(head -$((${RANDOM} % `wc -l < $lastlist` + 1)) $lastlist | tail -1)
+  r_female=$(r_pick $femalelist)
+  r_flast=$(r_pick $lastlist)
   echo $r_female $r_flast
 done
 
